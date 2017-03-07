@@ -1,11 +1,11 @@
 GIT工作流程
 简单介绍Git团队开发工作流程：
-  ● fetch 每天来coding前，先执行下，拉取下远程master分支最新的内容。
-  ● diff 拉取完成后，查看主分支更新情况。
-  ● merge 如没有问题，就将主分支合并到本地主分支内。
-  ● branch 创建分支，在分支内进行创作。
-  ● push 将分支推送到远程分支内。
-  ● pull reqeust 在TFS发起pull request请求。
+  * fetch 每天来coding前，先执行下，拉取下远程master分支最新的内容。
+  * diff 拉取完成后，查看主分支更新情况。
+  * merge 如没有问题，就将主分支合并到本地主分支内。
+  * branch 创建分支，在分支内进行创作。
+  * push 将分支推送到远程分支内。
+  * pull reqeust 在TFS发起pull request请求。
 
 创建分支
 这里只从创建branch开始说起。创建branch，有如下命令可供参考：
