@@ -1,0 +1,1 @@
+url: http://gitref.org/zh/remotes/
