@@ -1,22 +1,25 @@
+[参考网址：http://wiki.jikexueyuan.com/project/gradle/java-quickstart.html](http://wiki.jikexueyuan.com/project/gradle/java-quickstart.html)
+
+* 初始化一个java项目`gradle init --type java-library`
+
 在编写Gradle脚本的时候，在build.gradle文件中经常看到这样的代码：
 
 *build.gradle*
-```
-buildScript {
-    repositories {
-         mavenCentral()
-    }
-    
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
-    }
-}
 
-repositories {
-    mavenCentral()
-}
+	buildScript {
+	    repositories {
+	         mavenCentral()
+	    }
+	    
+	    dependencies {
+	        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+	    }
+	}
+	
+	repositories {
+	    mavenCentral()
+	}
 
-```
 这样子很容易让人奇怪，为什么repositories要声明两次哪？buildscript代码块中的声明与下半部分声明有什么不同？
 
 其实答案非常简单。buildscript中的声明是gradle脚本自身需要使用的资源。可以声明的资源包括依赖项、第三方插件、maven仓库地址等。而在build.gradle文件中直接声明的依赖项、仓库地址等信息是项目自身需要的资源。
