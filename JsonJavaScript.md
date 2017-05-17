@@ -2,74 +2,75 @@
 
  
 将 JavaScript 对象表示法 (JSON) 字符串转换为对象。
-语法
-JSON.parse(text [, reviver])
-参数
-text
-必需。一个有效的 JSON 字符串。
-reviver
-可选。一个转换结果的函数。将为对象的每个成员调用此函数。如果成员包含嵌套对象，则先于父对象转换嵌套对象。对于每个成员，会发生以下情况：
-如果 reviver 返回一个有效值，则成员值将替换为转换后的值。
-如果 reviver 返回它接收的相同值，则不修改成员值。
-如果 reviver 返回 null 或 undefined，则删除成员。
-返回值
+语法```JSON.parse(text [, reviver])```
+
+* 参数text必需,一个有效的 JSON 字符串。
+* reviver可选,一个转换结果的函数。将为对象的每个成员调用此函数。如果成员包含嵌套对象，则先于父对象转换嵌套对象。对于每个成员，会发生以下情况：
+* 如果 reviver 返回一个有效值，则成员值将替换为转换后的值。
+* 如果 reviver 返回它接收的相同值，则不修改成员值。
+* 如果 reviver 返回 null 或 undefined，则删除成员。
+* 返回值
 一个对象或数组。
-异常
-如果此函数引发 JavaScript 分析器错误（如“SCRIPT1014：无效字符”），则输入文本将不遵循 JSON 语法。若要更正此错误，请执行下列操作之一：
+* 异常 如果此函数引发 JavaScript 分析器错误（如“SCRIPT1014：无效字符”），则输入文本将不遵循 JSON 语法。若要更正此错误，请执行下列操作之一：
 修改 text 参数以遵循 JSON 语法。有关更多信息，请参见 JSON 对象的 BNF 语法表示法。
 例如，如果响应的格式为 JSONP 而非纯 JSON，请在响应对象上尝试此代码：
-JavaScript
-var fixedResponse = response.responseText.replace(/\\'/g, "'");
-var jsonObj = JSON.parse(fixedResponse);
+
+		JavaScript
+		var fixedResponse = response.responseText.replace(/\\'/g, "'");
+
 确保通过 JSON 兼容的实现（如 JSON.stringify）对 text 参数进行序列化。
 在 JSON 验证程序（如 JSLint）中运行 text 参数以帮助找到语法错误。
 Exception	Condition
 以下示例使用 JSON.parse 将 JSON 字符串转换成对象。
-JavaScript
-var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
-var contact = JSON.parse(jsontext);
-document.write(contact.surname + ", " + contact.firstname);
+
+	JavaScript
+	var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
+	var contact = JSON.parse(jsontext);
+	document.write(contact.surname + ", " + contact.firstname);
 
 // Output: Aaberg, Jesper
 以下示例演示了如何使用 JSON.stringify 将数组转换成 JSON 字符串，然后使用 JSON.parse 将该字符串重新转换成数组。
-JavaScript
-var arr = ["a", "b", "c"];
-var str = JSON.stringify(arr);
-document.write(str);
-document.write ("<br/>");
+	
+	JavaScript
+	var arr = ["a", "b", "c"];
+	var str = JSON.stringify(arr);
+	document.write(str);
+	document.write ("<br/>");
+	
+	var newArr = JSON.parse(str);
+	
+	while (newArr.length > 0) {
+	    document.write(newArr.pop() + "<br/>");
+	}
 
-var newArr = JSON.parse(str);
+	
+	// Output:
+	// ["a","b","c"]
+	// c
+	// b
+	// a
 
-while (newArr.length > 0) {
-    document.write(newArr.pop() + "<br/>");
-}
-
-
-// Output:
-// ["a","b","c"]
-// c
-// b
-// a
 reviver 函数通常用于将国际标准化组织 (ISO) 日期字符串的 JSON 表示形式转换为协调世界时 (UTC) 格式 Date 对象。此示例使用 JSON.parse 来反序列化 ISO 格式的日期字符串。 dateReviver 函数为格式为 ISO 日期字符串的成员返回 Date 对象。
-JavaScript
-var jsontext = '{ "hiredate": "2008-01-01T12:00:00Z", "birthdate": "2008-12-25T12:00:00Z" }';
-var dates = JSON.parse(jsontext, dateReviver);
-document.write(dates.birthdate.toUTCString());
-
-function dateReviver(key, value) {
-    var a;
-    if (typeof value === 'string') {
-        a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
-        if (a) {
-            return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4],
-                            +a[5], +a[6]));
-        }
-    }
-    return value;
-};
-
-// Output:
-// Thu, 25 Dec 2008 12:00:00 UTC
+	
+	JavaScript
+	var jsontext = '{ "hiredate": "2008-01-01T12:00:00Z", "birthdate": "2008-12-25T12:00:00Z" }';
+	var dates = JSON.parse(jsontext, dateReviver);
+	document.write(dates.birthdate.toUTCString());
+	
+	function dateReviver(key, value) {
+	    var a;
+	    if (typeof value === 'string') {
+	        a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+	        if (a) {
+	            return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4],
+	                            +a[5], +a[6]));
+	        }
+	    }
+	    return value;
+	};
+	
+	// Output:
+	// Thu, 25 Dec 2008 12:00:00 UTC
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------
