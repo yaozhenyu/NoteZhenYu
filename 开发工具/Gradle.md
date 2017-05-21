@@ -53,3 +53,7 @@ task printCSV() {
     }
 }
 ```
+**build项目**
+
+`gradle build`
+
