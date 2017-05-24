@@ -24,15 +24,13 @@
 - 动态页签：Jerichotab
 - 手机端框架：Jingle
 - 数据表格：jqGrid
-- 对话框：jQuery jBox
+- 对话框：jQuery jBox 替代：layui
 - 下拉选择框：jQuery Select2
 - 树结构控件：jQuery zTree
-- 日期控件： My97DatePicker
+- 日期控件： My97DatePicker 替代：layui
 ## 3、平台
 
 - 服务器中间件：在Java EE 5规范（Servlet 2.5、JSP 2.1）下开发，支持应用服务器中间件 有Tomcat 6+、Jboss 7+、WebLogic 10+、WebSphere 8+。
 - 数据库支持：目前仅提供MySql和Oracle数据库的支持，但不限于数据库，平台留有其它数据库支持接口， 你可以很方便的更改为其它数据库，如：SqlServer 2008、MySql 5.5、H2等
 - 开发环境：Java、Eclipse Java EE 4.3、Maven 3.1、Git
- 
 
-# Jeecg技术选型
