@@ -1,6 +1,4 @@
-## 修改端口
-
-- 1、Java代码修改
+- 1、Java代码修改端口
 ```
 package hello;
 
