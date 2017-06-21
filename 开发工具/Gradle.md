@@ -57,3 +57,17 @@ task printCSV() {
 
 `gradle build`
 
+
+
+**设置resources目录**
+
+```
+sourceSets {
+    main {
+        resources {
+            srcDirs "src/main/resources", "src/main/configs"
+        }
+    }
+}
+```
+
