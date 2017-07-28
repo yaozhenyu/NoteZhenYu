@@ -10,15 +10,15 @@
 **下拉框：**
 
 *固定：*
-
-	<form:select path="actName" class="input-medium">
-  		<form:option value=" " label=" "/>
-  		<form:option value="审核" label="审核"/>
-  		<form:option value="线上调查" label="线上调查"/>
-  		<form:option value="征信审查" label="征信审查"/>
- 		<form:option value="审批" label="审批"></form:option>
-	</form:select>
-
+```
+<form:select path="actName" class="input-medium">
+  	<form:option value=" " label=" "/>
+  	<form:option value="审核" label="审核"/>
+  	<form:option value="线上调查" label="线上调查"/>
+  	<form:option value="征信审查" label="征信审查"/>
+ 	<form:option value="审批" label="审批"></form:option>
+ </form:select>
+```
 
 *从数据字典获取：*
 
@@ -64,4 +64,4 @@ pattern="yyyy-MM-dd HH:mm:ss"(h要大写,小写的为12小时表示法)
 	onclick="laydate({istime: false, format: 'YYYY-MM-DD',max: laydate.now()})" 
 	readonly="true"/>
 
-</br></br></br></br></br></br></br></br></br></br></br></br></br>
+
