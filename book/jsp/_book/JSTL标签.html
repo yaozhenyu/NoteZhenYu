@@ -1,0 +1,580 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JSTL标签 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="自定义jstl fn函数fns.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JSP笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="JSTL标签.html">
+            
+                <a href="JSTL标签.html">
+            
+                    
+                    JSTL标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="自定义jstl fn函数fns.html">
+            
+                <a href="自定义jstl fn函数fns.html">
+            
+                    
+                    自定义jstl fn函数fns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="自定义标签.html">
+            
+                <a href="自定义标签.html">
+            
+                    
+                    自定义标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >JSTL标签</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jstl&#x6807;&#x7B7E;&#xFF1A;">JSTL&#x6807;&#x7B7E;&#xFF1A;</h1>
+<ul>
+<li><strong>&#x6838;&#x5FC3;&#x6807;&#x7B7E;</strong> </li>
+<li><strong>&#x683C;&#x5F0F;&#x5316;&#x6807;&#x7B7E;</strong></li>
+<li><strong>SQL &#x6807;&#x7B7E;</strong> </li>
+<li><strong>XML &#x6807;&#x7B7E;</strong> </li>
+<li><strong>JSTL &#x51FD;&#x6570;</strong></li>
+</ul>
+<h2 id="&#x6838;&#x5FC3;&#x6807;&#x7B7E;">&#x6838;&#x5FC3;&#x6807;&#x7B7E;</h2>
+<p>&#x6838;&#x5FC3;&#x6807;&#x7B7E;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;JSTL&#x6807;&#x7B7E;&#x3002;&#x5F15;&#x7528;&#x6838;&#x5FC3;&#x6807;&#x7B7E;&#x5E93;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x6807;&#x7B7E;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><c:out></c:out></td>
+<td>&#x7528;&#x4E8E;&#x5728;JSP&#x4E2D;&#x663E;&#x793A;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x50CF;&lt;%= ... &gt;</td>
+</tr>
+<tr>
+<td><c:set></c:set></td>
+<td>&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><c:remove></c:remove></td>
+<td>&#x7528;&#x4E8E;&#x5220;&#x9664;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><c:catch></c:catch></td>
+<td>&#x7528;&#x6765;&#x5904;&#x7406;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x5F02;&#x5E38;&#x72B6;&#x51B5;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x50A8;&#x5B58;&#x8D77;&#x6765;</td>
+</tr>
+<tr>
+<td><c:if></c:if></td>
+<td>&#x4E0E;&#x6211;&#x4EEC;&#x5728;&#x4E00;&#x822C;&#x7A0B;&#x5E8F;&#x4E2D;&#x7528;&#x7684;if&#x4E00;&#x6837;</td>
+</tr>
+<tr>
+<td><c:choose></c:choose></td>
+<td>&#x672C;&#x8EAB;&#x53EA;&#x5F53;&#x505A;<c:when>&#x548C;<c:otherwise>&#x7684;&#x7236;&#x6807;&#x7B7E;</c:otherwise></c:when></td>
+</tr>
+<tr>
+<td><c:when></c:when></td>
+<td><c:choose>&#x7684;&#x5B50;&#x6807;&#x7B7E;&#xFF0C;&#x7528;&#x6765;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6210;&#x7ACB;</c:choose></td>
+</tr>
+<tr>
+<td><c:otherwise></c:otherwise></td>
+<td><c:choose>&#x7684;&#x5B50;&#x6807;&#x7B7E;&#xFF0C;&#x63A5;&#x5728;<c:when>&#x6807;&#x7B7E;&#x540E;&#xFF0C;&#x5F53;<c:when>&#x6807;&#x7B7E;&#x5224;&#x65AD;&#x4E3A;false&#x65F6;&#x88AB;&#x6267;&#x884C;</c:when></c:when></c:choose></td>
+</tr>
+<tr>
+<td><c:import></c:import></td>
+<td>&#x68C0;&#x7D22;&#x4E00;&#x4E2A;&#x7EDD;&#x5BF9;&#x6216;&#x76F8;&#x5BF9; URL&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5176;&#x5185;&#x5BB9;&#x66B4;&#x9732;&#x7ED9;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><c:foreach></c:foreach></td>
+<td>&#x57FA;&#x7840;&#x8FED;&#x4EE3;&#x6807;&#x7B7E;&#xFF0C;&#x63A5;&#x53D7;&#x591A;&#x79CD;&#x96C6;&#x5408;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td><c:fortokens></c:fortokens></td>
+<td>&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x6765;&#x5206;&#x9694;&#x5185;&#x5BB9;&#x5E76;&#x8FED;&#x4EE3;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td><c:param></c:param></td>
+<td>&#x7528;&#x6765;&#x7ED9;&#x5305;&#x542B;&#x6216;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x9875;&#x9762;&#x4F20;&#x9012;&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td><c:redirect></c:redirect></td>
+<td>&#x91CD;&#x5B9A;&#x5411;&#x81F3;&#x4E00;&#x4E2A;&#x65B0;&#x7684;URL.</td>
+</tr>
+<tr>
+<td><c:url></c:url></td>
+<td>&#x4F7F;&#x7528;&#x53EF;&#x9009;&#x7684;&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#x6765;&#x521B;&#x9020;&#x4E00;&#x4E2A;URL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x683C;&#x5F0F;&#x5316;&#x6807;&#x7B7E;">&#x683C;&#x5F0F;&#x5316;&#x6807;&#x7B7E;</h2>
+<p>JSTL&#x683C;&#x5F0F;&#x5316;&#x6807;&#x7B7E;&#x7528;&#x6765;&#x683C;&#x5F0F;&#x5316;&#x5E76;&#x8F93;&#x51FA;&#x6587;&#x672C;&#x3001;&#x65E5;&#x671F;&#x3001;&#x65F6;&#x95F4;&#x3001;&#x6570;&#x5B57;&#x3002;&#x5F15;&#x7528;&#x683C;&#x5F0F;&#x5316;&#x6807;&#x7B7E;&#x5E93;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;%@ taglib prefix=&quot;fmt&quot; uri=&quot;http://java.sun.com/jsp/jstl/fmt&quot; %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x6807;&#x7B7E;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><fmt:formatnumber></fmt:formatnumber></td>
+<td>&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x6216;&#x7CBE;&#x5EA6;&#x683C;&#x5F0F;&#x5316;&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td><fmt:parsenumber></fmt:parsenumber></td>
+<td>&#x89E3;&#x6790;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x7740;&#x6570;&#x5B57;&#xFF0C;&#x8D27;&#x5E01;&#x6216;&#x767E;&#x5206;&#x6BD4;&#x7684;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td><fmt:formatdate></fmt:formatdate></td>
+<td>&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x98CE;&#x683C;&#x6216;&#x6A21;&#x5F0F;&#x683C;&#x5F0F;&#x5316;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td><fmt:parsedate></fmt:parsedate></td>
+<td>&#x89E3;&#x6790;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x7740;&#x65E5;&#x671F;&#x6216;&#x65F6;&#x95F4;&#x7684;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td><fmt:bundle></fmt:bundle></td>
+<td>&#x7ED1;&#x5B9A;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td><fmt:setlocale></fmt:setlocale></td>
+<td>&#x6307;&#x5B9A;&#x5730;&#x533A;</td>
+</tr>
+<tr>
+<td><fmt:setbundle></fmt:setbundle></td>
+<td>&#x7ED1;&#x5B9A;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td><fmt:timezone></fmt:timezone></td>
+<td>&#x6307;&#x5B9A;&#x65F6;&#x533A;</td>
+</tr>
+<tr>
+<td><fmt:settimezone></fmt:settimezone></td>
+<td>&#x6307;&#x5B9A;&#x65F6;&#x533A;</td>
+</tr>
+<tr>
+<td><fmt:message></fmt:message></td>
+<td>&#x663E;&#x793A;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><fmt:requestencoding></fmt:requestencoding></td>
+<td>&#x8BBE;&#x7F6E;request&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x5316;</strong></p>
+<pre><code>&lt;fmt:formatDate value=&quot;${actCreditApplyProcess.beginDate}&quot; pattern=&quot;yyyy-MM-dd&quot;/&gt;
+</code></pre><p>24&#x5C0F;&#x65F6;&#x8868;&#x793A;&#x6CD5;</p>
+<p>pattern=&quot;yyyy-MM-dd HH:mm:ss&quot;(h&#x8981;&#x5927;&#x5199;,&#x5C0F;&#x5199;&#x7684;&#x4E3A;12&#x5C0F;&#x65F6;&#x8868;&#x793A;&#x6CD5;)</p>
+<p><strong>&#x9875;&#x9762;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#x6B63;&#x5E38;&#x663E;&#x793A;&#x4E3A;&#x6570;&#x5B57;</strong></p>
+<pre><code>&lt;fmt:formatNumber value=&quot;${custHouse1.houseval}&quot; pattern=&quot;#0.##&quot;/&gt;
+</code></pre><p>&#x4F8B;&#x5B50;&#x8868;&#x793A;&#x4FDD;&#x7559;&#x4E24;&#x4F4D;&#x5C0F;&#x6570;</p>
+<h2 id="sql&#x6807;&#x7B7E;">SQL&#x6807;&#x7B7E;</h2>
+<p>JSTL SQL&#x6807;&#x7B7E;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;Oracle&#xFF0C;MySQL&#xFF0C;SQL Server&#x7B49;&#x7B49;&#xFF09;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x5F15;&#x7528;SQL&#x6807;&#x7B7E;&#x5E93;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;%@ taglib prefix=&quot;sql&quot; uri=&quot;http://java.sun.com/jsp/jstl/sql&quot; %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x6807;&#x7B7E;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><sql:setdatasource></sql:setdatasource></td>
+<td>&#x6307;&#x5B9A;&#x6570;&#x636E;&#x6E90;</td>
+</tr>
+<tr>
+<td><sql:query></sql:query></td>
+<td>&#x8FD0;&#x884C;SQL&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</td>
+</tr>
+<tr>
+<td><sql:update></sql:update></td>
+<td>&#x8FD0;&#x884C;SQL&#x66F4;&#x65B0;&#x8BED;&#x53E5;</td>
+</tr>
+<tr>
+<td><sql:param></sql:param></td>
+<td>&#x5C06;SQL&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x8BBE;&#x4E3A;&#x6307;&#x5B9A;&#x503C;</td>
+</tr>
+<tr>
+<td><sql:dateparam></sql:dateparam></td>
+<td>&#x5C06;SQL&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#x53C2;&#x6570;&#x8BBE;&#x4E3A;&#x6307;&#x5B9A;&#x7684;java.util.Date &#x5BF9;&#x8C61;&#x503C;</td>
+</tr>
+<tr>
+<td><sql:transaction></sql:transaction></td>
+<td>&#x5728;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4E2D;&#x63D0;&#x4F9B;&#x5D4C;&#x5957;&#x7684;&#x6570;&#x636E;&#x5E93;&#x884C;&#x4E3A;&#x5143;&#x7D20;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x8BED;&#x53E5;&#x4EE5;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x8FD0;&#x884C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xml-&#x6807;&#x7B7E;">XML &#x6807;&#x7B7E;</h2>
+<p>JSTL XML&#x6807;&#x7B7E;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x521B;&#x5EFA;&#x548C;&#x64CD;&#x4F5C;XML&#x6587;&#x6863;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x5F15;&#x7528;XML&#x6807;&#x7B7E;&#x5E93;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;%@ taglib prefix=&quot;x&quot; uri=&quot;http://java.sun.com/jsp/jstl/xml&quot; %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x6807;&#x7B7E;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><x:out></x:out></td>
+<td>&#x4E0E;&lt;%= ... &gt;,&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x8FC7;&#x53EA;&#x7528;&#x4E8E;XPath&#x8868;&#x8FBE;&#x5F0F;</td>
+</tr>
+<tr>
+<td><x:parse></x:parse></td>
+<td>&#x89E3;&#x6790; XML &#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><x:set></x:set></td>
+<td>&#x8BBE;&#x7F6E;XPath&#x8868;&#x8FBE;&#x5F0F;</td>
+</tr>
+<tr>
+<td><x:if></x:if></td>
+<td>&#x5224;&#x65AD;XPath&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x82E5;&#x4E3A;&#x771F;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x672C;&#x4F53;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5426;&#x5219;&#x8DF3;&#x8FC7;&#x672C;&#x4F53;</td>
+</tr>
+<tr>
+<td><x:foreach></x:foreach></td>
+<td>&#x8FED;&#x4EE3;XML&#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td><x:choose></x:choose></td>
+<td><x:when>&#x548C;<x:otherwise>&#x7684;&#x7236;&#x6807;&#x7B7E;</x:otherwise></x:when></td>
+</tr>
+<tr>
+<td><x:when></x:when></td>
+<td><x:choose>&#x7684;&#x5B50;&#x6807;&#x7B7E;&#xFF0C;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x6761;&#x4EF6;&#x5224;&#x65AD;</x:choose></td>
+</tr>
+<tr>
+<td><x:otherwise></x:otherwise></td>
+<td><x:choose>&#x7684;&#x5B50;&#x6807;&#x7B7E;&#xFF0C;&#x5F53;<x:when>&#x5224;&#x65AD;&#x4E3A;false&#x65F6;&#x88AB;&#x6267;&#x884C;</x:when></x:choose></td>
+</tr>
+<tr>
+<td><x:transform></x:transform></td>
+<td>&#x5C06;XSL&#x8F6C;&#x6362;&#x5E94;&#x7528;&#x5728;XML&#x6587;&#x6863;&#x4E2D;</td>
+</tr>
+<tr>
+<td><x:param></x:param></td>
+<td>&#x4E0E;<x:transform>&#x5171;&#x540C;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;XSL&#x6837;&#x5F0F;&#x8868;</x:transform></td>
+</tr>
+</tbody>
+</table>
+<h2 id="jstl&#x51FD;&#x6570;">JSTL&#x51FD;&#x6570;</h2>
+<p>JSTL&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x6807;&#x51C6;&#x51FD;&#x6570;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x662F;&#x901A;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;&#x5F15;&#x7528;JSTL&#x51FD;&#x6570;&#x5E93;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;%@ taglib prefix=&quot;fn&quot; uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">&#x51FD;&#x6570;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-contains.html" target="_blank">fn:contains()</a></td>
+<td>&#x6D4B;&#x8BD5;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7684;&#x5B50;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-containsignoreCase.html" target="_blank">fn:containsIgnoreCase()</a></td>
+<td>&#x6D4B;&#x8BD5;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-endswith.html" target="_blank">fn:endsWith()</a></td>
+<td>&#x6D4B;&#x8BD5;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x540E;&#x7F00;&#x7ED3;&#x5C3E;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-escapexml.html" target="_blank">fn:escapeXml()</a></td>
+<td>&#x8DF3;&#x8FC7;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;XML&#x6807;&#x8BB0;&#x7684;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-indexof.html" target="_blank">fn:indexOf()</a></td>
+<td>&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-join.html" target="_blank">fn:join()</a></td>
+<td>&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7136;&#x540E;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-length.html" target="_blank">fn:length()</a></td>
+<td>&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-replace.html" target="_blank">fn:replace()</a></td>
+<td>&#x5C06;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x66FF;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7136;&#x540E;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-split.html" target="_blank">fn:split()</a></td>
+<td>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x5206;&#x9694;&#x7136;&#x540E;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x5E76;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-startswith.html" target="_blank">fn:startsWith()</a></td>
+<td>&#x6D4B;&#x8BD5;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x524D;&#x7F00;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-substring.html" target="_blank">fn:substring()</a></td>
+<td>&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B50;&#x96C6;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-substringafter.html" target="_blank">fn:substringAfter()</a></td>
+<td>&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x6307;&#x5B9A;&#x5B50;&#x4E32;&#x4E4B;&#x540E;&#x7684;&#x5B50;&#x96C6;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-substringbefore.html" target="_blank">fn:substringBefore()</a></td>
+<td>&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x5728;&#x6307;&#x5B9A;&#x5B50;&#x4E32;&#x4E4B;&#x524D;&#x7684;&#x5B50;&#x96C6;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-tolowercase.html" target="_blank">fn:toLowerCase()</a></td>
+<td>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x8F6C;&#x4E3A;&#x5C0F;&#x5199;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-touppercase.html" target="_blank">fn:toUpperCase()</a></td>
+<td>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x8F6C;&#x4E3A;&#x5927;&#x5199;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/jsp/jstl-function-trim.html" target="_blank">fn:trim()</a></td>
+<td>&#x79FB;&#x9664;&#x9996;&#x4F4D;&#x7684;&#x7A7A;&#x767D;&#x7B26;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: JSP笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="自定义jstl fn函数fns.html" class="navigation navigation-next " aria-label="Next page: 自定义jstl fn函数fns">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JSTL标签","level":"1.2","depth":1,"next":{"title":"自定义jstl fn函数fns","level":"1.3","depth":1,"path":"自定义jstl fn函数fns.md","ref":"自定义jstl fn函数fns.md","articles":[]},"previous":{"title":"JSP笔记","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JSTL标签.md","mtime":"2017-08-02T03:37:22.054Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-02T09:45:26.484Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
