@@ -21,22 +21,22 @@
 
 
 
-| 标签            | 描述                                       |
-| ------------- | ---------------------------------------- |
-| <c:out>       | 用于在JSP中显示数据，就像<%= ... >                  |
-| <c:set>       | 用于保存数据                                   |
-| <c:remove>    | 用于删除数据                                   |
-| <c:catch>     | 用来处理产生错误的异常状况，并且将错误信息储存起来                |
-| <c:if>        | 与我们在一般程序中用的if一样                          |
-| <c:choose>    | 本身只当做<c:when>和<c:otherwise>的父标签          |
-| <c:when>      | <c:choose>的子标签，用来判断条件是否成立                |
-| <c:otherwise> | <c:choose>的子标签，接在<c:when>标签后，当<c:when>标签判断为false时被执行 |
-| <c:import>    | 检索一个绝对或相对 URL，然后将其内容暴露给页面                |
-| <c:forEach>   | 基础迭代标签，接受多种集合类型                          |
-| <c:forTokens> | 根据指定的分隔符来分隔内容并迭代输出                       |
-| <c:param>     | 用来给包含或重定向的页面传递参数                         |
-| <c:redirect>  | 重定向至一个新的URL.                             |
-| <c:url>       | 使用可选的查询参数来创造一个URL                        |
+| 标签              | 描述                                       |
+| --------------- | ---------------------------------------- |
+| `<c:out>`       | 用于在JSP中显示数据，就像<%= ... >                  |
+| `<c:set>`       | 用于保存数据                                   |
+| `<c:remove>`    | 用于删除数据                                   |
+| `<c:catch>`     | 用来处理产生错误的异常状况，并且将错误信息储存起来                |
+| `<c:if>`        | 与我们在一般程序中用的if一样                          |
+| `<c:choose>`    | 本身只当做<c:when>和<c:otherwise>的父标签          |
+| `<c:when>`      | <c:choose>的子标签，用来判断条件是否成立                |
+| `<c:otherwise>` | <c:choose>的子标签，接在<c:when>标签后，当<c:when>标签判断为false时被执行 |
+| `<c:import>`    | 检索一个绝对或相对 URL，然后将其内容暴露给页面                |
+| `<c:forEach>`   | 基础迭代标签，接受多种集合类型                          |
+| `<c:forTokens>` | 根据指定的分隔符来分隔内容并迭代输出                       |
+| `<c:param>`     | 用来给包含或重定向的页面传递参数                         |
+| `<c:redirect>`  | 重定向至一个新的URL.                             |
+| `<c:url>`       | 使用可选的查询参数来创造一个URL                        |
 
 
 
@@ -50,19 +50,19 @@ JSTL格式化标签用来格式化并输出文本、日期、时间、数字。�
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 ```
 
-| 标签                    | 描述                   |
-| --------------------- | -------------------- |
-| <fmt:formatNumber>    | 使用指定的格式或精度格式化数字      |
-| <fmt:parseNumber>     | 解析一个代表着数字，货币或百分比的字符串 |
-| <fmt:formatDate>      | 使用指定的风格或模式格式化日期和时间   |
-| <fmt:parseDate>       | 解析一个代表着日期或时间的字符串     |
-| <fmt:bundle>          | 绑定资源                 |
-| <fmt:setLocale>       | 指定地区                 |
-| <fmt:setBundle>       | 绑定资源                 |
-| <fmt:timeZone>        | 指定时区                 |
-| <fmt:setTimeZone>     | 指定时区                 |
-| <fmt:message>         | 显示资源配置文件信息           |
-| <fmt:requestEncoding> | 设置request的字符编码       |
+| 标签                      | 描述                   |
+| ----------------------- | -------------------- |
+| `<fmt:formatNumber>`    | 使用指定的格式或精度格式化数字      |
+| `<fmt:parseNumber>`     | 解析一个代表着数字，货币或百分比的字符串 |
+| `<fmt:formatDate>`      | 使用指定的风格或模式格式化日期和时间   |
+| `<fmt:parseDate>`       | 解析一个代表着日期或时间的字符串     |
+| `<fmt:bundle>`          | 绑定资源                 |
+| `<fmt:setLocale>`       | 指定地区                 |
+| `<fmt:setBundle>`       | 绑定资源                 |
+| `<fmt:timeZone>`        | 指定时区                 |
+| `<fmt:setTimeZone>`     | 指定时区                 |
+| `<fmt:message>`         | 显示资源配置文件信息           |
+| `<fmt:requestEncoding>` | 设置request的字符编码       |
 
 **日期格式化**
 
@@ -92,14 +92,14 @@ JSTL SQL标签库提供了与关系型数据库（Oracle，MySQL，SQL Server等
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 ```
 
-| 标签                  | 描述                                     |
-| ------------------- | -------------------------------------- |
-| <sql:setDataSource> | 指定数据源                                  |
-| <sql:query>         | 运行SQL查询语句                              |
-| <sql:update>        | 运行SQL更新语句                              |
-| <sql:param>         | 将SQL语句中的参数设为指定值                        |
-| <sql:dateParam>     | 将SQL语句中的日期参数设为指定的java.util.Date 对象值    |
-| <sql:transaction>   | 在共享数据库连接中提供嵌套的数据库行为元素，将所有语句以一个事务的形式来运行 |
+| 标签                    | 描述                                     |
+| --------------------- | -------------------------------------- |
+| `<sql:setDataSource>` | 指定数据源                                  |
+| `<sql:query>`         | 运行SQL查询语句                              |
+| `<sql:update>`        | 运行SQL更新语句                              |
+| `<sql:param>`         | 将SQL语句中的参数设为指定值                        |
+| `<sql:dateParam>`     | 将SQL语句中的日期参数设为指定的java.util.Date 对象值    |
+| `<sql:transaction>`   | 在共享数据库连接中提供嵌套的数据库行为元素，将所有语句以一个事务的形式来运行 |
 
 
 
@@ -115,18 +115,18 @@ JSTL XML标签库提供了创建和操作XML文档的标签。引用XML标签库
 
 
 
-| 标签            | 描述                                   |
-| ------------- | ------------------------------------ |
-| <x:out>       | 与<%= ... >,类似，不过只用于XPath表达式          |
-| <x:parse>     | 解析 XML 数据                            |
-| <x:set>       | 设置XPath表达式                           |
-| <x:if>        | 判断XPath表达式，若为真，则执行本体中的内容，否则跳过本体      |
-| <x:forEach>   | 迭代XML文档中的节点                          |
-| <x:choose>    | <x:when>和<x:otherwise>的父标签           |
-| <x:when>      | <x:choose>的子标签，用来进行条件判断              |
-| <x:otherwise> | <x:choose>的子标签，当<x:when>判断为false时被执行 |
-| <x:transform> | 将XSL转换应用在XML文档中                      |
-| <x:param>     | 与<x:transform>共同使用，用于设置XSL样式表        |
+| 标签              | 描述                                   |
+| --------------- | ------------------------------------ |
+| `<x:out>`       | 与<%= ... >,类似，不过只用于XPath表达式          |
+| `<x:parse>`     | 解析 XML 数据                            |
+| `<x:set>`       | 设置XPath表达式                           |
+| `<x:if>`        | 判断XPath表达式，若为真，则执行本体中的内容，否则跳过本体      |
+| `<x:forEach>`   | 迭代XML文档中的节点                          |
+| `<x:choose>`    | <x:when>和<x:otherwise>的父标签           |
+| `<x:when>`      | <x:choose>的子标签，用来进行条件判断              |
+| `<x:otherwise>` | <x:choose>的子标签，当<x:when>判断为false时被执行 |
+| `<x:transform>` | 将XSL转换应用在XML文档中                      |
+| `<x:param>`     | 与<x:transform>共同使用，用于设置XSL样式表        |
 
 
 
