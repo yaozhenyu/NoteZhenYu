@@ -4,12 +4,16 @@
 	<meta charset="utf-8">
 	<title>Menu</title>
 	<style type="text/css">
-		.red{
+
+		/*属性选择器*/
+		/*class值包含red*/
+		[class ~= "red"]{
 			color: red
 		}
 
-/*		[class||red]{
-			
+		/*class值以red开头*/
+/*		[class |= "red"]{
+			color: red
 		}*/
 
 	</style>
@@ -85,7 +89,7 @@
 
 	Object.prototype.addClass = function(args){
 		var clazz = (this.getAttribute("class"));
-		this.setAttribute("class", clazz+" "+args);
+		this.setAttribute("class", clazz?clazz+" "+args : args);
 	}
 	
 	var menu = document.getElementById("menu");
