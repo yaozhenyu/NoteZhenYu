@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Menu</title>
+	<style type="text/css">
+		.red{
+			color: red
+		}
+
+/*		[class||red]{
+			
+		}*/
+
+	</style>
 </head>
 
 <body>
@@ -72,9 +83,14 @@
 		return ul;
 	}
 
+	Object.prototype.addClass = function(args){
+		var clazz = (this.getAttribute("class"));
+		this.setAttribute("class", clazz+" "+args);
+	}
+	
 	var menu = document.getElementById("menu");
 	menu.appendChild(new Menu(data).createMenu());
-
+	menu.addClass("red");
 </script>
 </body>
 </html>
