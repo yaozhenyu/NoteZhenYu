@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+</head>
+
+<body>
+	<div id="menu"></div>
+
+<script type="text/javascript">
+
+
+	var data = {
+		pid:"/",
+		id:"1",
+		name:"1",
+		icon:"",
+		children:[{
+				pid:"/",
+				id:"11",
+				name:"11",
+				icon:""
+			},{
+				pid:"/",
+				id:"12",
+				name:"12",
+				icon:"",
+				children:[
+					{pid:"12",id:"121",name:"121",icon:""},
+					{pid:"12",id:"122",name:"122",icon:"",children:[
+						{pid:"122",id:"1221",name:"1221",icon:""},
+						{pid:"122",id:"1222",name:"1222",icon:""},
+						{pid:"122",id:"1223",name:"1223",icon:""},
+						{pid:"122",id:"1224",name:"1224",icon:""}
+					]}
+				]
+			}
+		]
+	};
+
+	function Menu(jsonObj){
+		this.pid = jsonObj.pid||"";
+		this.id = jsonObj.id||"";
+		this.name = jsonObj.name||"";
+		this.children=jsonObj.children||[];
+	}
+
+	Menu.prototype.createMenu = function() {
+		if(this.children.length == 0){
+			return Li(this.name);
+		} else {
+			var ul = Ul(this.name);
+			for (var i = 0; i < this.children.length; i++) {
+				var subMenu = new Menu(this.children[i]);
+				ul.appendChild(subMenu.createMenu());
+			}
+			return ul;
+		}
+	};
+
+	function Li(innerText){
+		var li = document.createElement("li");
+		var text = document.createTextNode(innerText||"");
+		li.appendChild(text);
+		return li;
+	}
+
+	function Ul(innerText){
+		var ul = document.createElement("ul");
+		var text = document.createTextNode(innerText||"");
+		ul.appendChild(text);
+		return ul;
+	}
+
+	var menu = document.getElementById("menu");
+	menu.appendChild(new Menu(data).createMenu());
+
+</script>
+</body>
+</html>
