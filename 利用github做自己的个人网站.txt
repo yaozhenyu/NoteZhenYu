@@ -1,0 +1,23 @@
+利用github网站生成自己的静态网站。
+
+1.注册一个github帐号。网址 https://github.com/ 。假如用户名：username
+2.创建一个username.github.io的仓库，用来存放静态网站的资源
+3.下载node.js
+4.安装gitbook-cli
+命令行输入 npm install gitbook-cli -g
+
+5.创建一个文件夹。命令行进入该目录
+输入命令 gitbook init生成两个文件 README.md SUMMARY.md
+README.md是对网站的简介。SUMMARY.md是用来管理目录结构的。
+
+SUMMARY.md的初始内容（Markdown格式）
+
+# Summary
+
+* [Introduction](README.md)
+
+[]方括号里的表示目录名称。()圆括号表示目录内容的文件路径。换行缩进两个空格表示是上一行的子目录。
+6.生成静态网站
+输入命令 gitbook build
+当前目录下生成了一个_book的文件夹。里面的文件就是生成的静态网站。把_book文件夹改个名字，假如改为gitbook，上传到仓库username.github.io。
+7.现在可以访问你的静态网站了。地址https://username.github.io/gitbook。
